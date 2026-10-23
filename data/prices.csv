@@ -1,0 +1,22 @@
+ticker,name,asset_type,sector,current_price
+RY,Royal Bank of Canada,Stock,Financials,182.40
+TD,Toronto-Dominion Bank,Stock,Financials,96.15
+NA,National Bank of Canada,Stock,Financials,141.70
+BNS,Bank of Nova Scotia,Stock,Financials,79.60
+MFC,Manulife Financial,Stock,Financials,44.80
+SLF,Sun Life Financial,Stock,Financials,82.30
+BN,Brookfield Corporation,Stock,Financials,88.50
+ENB,Enbridge,Stock,Energy,63.20
+CNR,Canadian National Railway,Stock,Industrials,152.30
+SHOP,Shopify,Stock,Information Technology,168.20
+CSU,Constellation Software,Stock,Information Technology,4210.00
+ATD,Alimentation Couche-Tard,Stock,Consumer Staples,76.40
+L,Loblaw Companies,Stock,Consumer Staples,192.80
+BCE,BCE Inc.,Stock,Communication Services,33.90
+T,TELUS,Stock,Communication Services,21.40
+FTS,Fortis,Stock,Utilities,66.75
+AEM,Agnico Eagle Mines,Stock,Materials,162.50
+XIU,iShares S&P/TSX 60 Index ETF,ETF,Canadian Equity (ETF),41.85
+VFV,Vanguard S&P 500 Index ETF,ETF,US Equity (ETF),158.60
+ZDV,BMO Canadian Dividend ETF,ETF,Canadian Dividend (ETF),25.10
+XBB,iShares Core Canadian Universe Bond ETF,ETF,Fixed Income (ETF),28.45
