@@ -58,6 +58,10 @@ def test_total_gain_loss_pct_is_gain_divided_by_cost(portfolio: Portfolio) -> No
     assert portfolio.total_gain_loss_pct == pytest.approx(10_000 / 190_000)
 
 
+def test_number_of_holding_counts_each_position(portfolio: Portfolio) -> None:
+    assert portfolio.number_of_holdings == 4
+
+
 # --- Weights and allocation -------------------------------------------------
 
 

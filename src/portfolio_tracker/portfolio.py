@@ -50,6 +50,11 @@ class Portfolio:
         """Gain or loss as a fraction of the amount invested."""
         return self.total_gain_loss / self.total_cost_basis
 
+    @property
+    def number_of_holdings(self) -> int:
+        """How many positions the client holds."""
+        return len(self.holdings)
+
     def weights(self) -> dict[str, float]:
         """Each holding's share of total market value, keyed by ticker."""
         return {holding.ticker: self._weight(holding) for holding in self.holdings}
