@@ -1,7 +1,7 @@
 [project]
-name = "fixed-income-dashboard"
+name = "portfolio-tracker"
 version = "0.1.0"
-description = "Illustrative fixed-income portfolio analytics dashboard (fictional data)."
+description = "Illustrative portfolio tracker for high-net-worth clients (fictional data)."
 requires-python = ">=3.14"
 
 [tool.pytest.ini_options]
