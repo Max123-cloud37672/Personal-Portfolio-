@@ -1,0 +1,16 @@
+[project]
+name = "fixed-income-dashboard"
+version = "0.1.0"
+description = "Illustrative fixed-income portfolio analytics dashboard (fictional data)."
+requires-python = ">=3.14"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
