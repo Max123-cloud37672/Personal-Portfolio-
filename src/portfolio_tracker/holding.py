@@ -3,6 +3,8 @@
 from dataclasses import dataclass
 from enum import Enum
 
+from portfolio_tracker.validation import require_positive_number, require_text
+
 
 class AssetType(Enum):
     """The kinds of investment the tracker supports."""
@@ -29,7 +31,7 @@ class Holding:
     def __post_init__(self) -> None:
         """Reject invalid inputs as soon as a holding is created."""
         for field_name in ("ticker", "name", "sector"):
-            _require_text(field_name, getattr(self, field_name))
+            require_text(field_name, getattr(self, field_name))
 
         if not isinstance(self.asset_type, AssetType):
             raise TypeError(
@@ -38,7 +40,7 @@ class Holding:
             )
 
         for field_name in ("quantity", "average_cost", "current_price"):
-            _require_positive_number(field_name, getattr(self, field_name))
+            require_positive_number(field_name, getattr(self, field_name))
 
     @property
     def cost_basis(self) -> float:
@@ -59,19 +61,3 @@ class Holding:
     def gain_loss_pct(self) -> float:
         """Gain or loss as a fraction of the amount invested (0.125 = 12.5%)."""
         return self.gain_loss / self.cost_basis
-
-
-def _require_text(field_name: str, value: object) -> None:
-    """Raise an error unless value is a non-blank string."""
-    if not isinstance(value, str):
-        raise TypeError(f"{field_name} must be text, got {value!r}")
-    if not value.strip():
-        raise ValueError(f"{field_name} must not be empty")
-
-
-def _require_positive_number(field_name: str, value: object) -> None:
-    """Raise an error unless value is a number greater than zero."""
-    if not isinstance(value, int | float):
-        raise TypeError(f"{field_name} must be a number, got {value!r}")
-    if value <= 0:
-        raise ValueError(f"{field_name} must be greater than 0, got {value}")
